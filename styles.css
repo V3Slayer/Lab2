@@ -20,7 +20,7 @@ section {
 .container {
     display: grid;
     margin: 0 0 0 0px;
-    grid-template-columns: 3fr 0.5fr;
+    grid-template-columns: 3fr 0.4fr;
     grid-template-rows:
     minmax(100px, auto)
     minmax(60px, auto)
@@ -35,7 +35,6 @@ section {
     'aside-2 aside-1'
     'footer aside-1';
 }
-
 
 
 
@@ -56,13 +55,13 @@ section {
 .main {
     grid-area: main;
    padding: 5 20 0 20px;
-   background-color: darkblue;
+   background-color: lightgray;
 }
 
 .aside-1 {
     grid-area: aside-1;
     padding: 0 0 0 0;
-    background-color: gray;
+    background-color: darkblue;
 }
 
 #navbar {
@@ -70,12 +69,16 @@ section {
 }
 
 #fixed-item {
-    margin: 0 0 0 0px;
-   padding: 0 20 0 20px;
+    right: 0%;
+   padding: 20 20 20 20px;
    position: fixed;
    width: inherit;
    color: white;
    background-color: darkblue;
+}
+
+#fixed-item a {
+    color: white;
 }
 
 .aside-2 {
