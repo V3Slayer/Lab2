@@ -1,12 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 0 50 0px;
+    margin: 0 0 0 0px;
 }
 
 header {
     background-color: black;
+    background-image: url(https://templates.utah.edu/_main-v2/_images/header/background/blue.jpg);
     color: rgba(107, 164, 234, 0.80);
-    padding: 20px;
+    padding: 25px;
 }
 
 section {
@@ -20,20 +21,26 @@ section {
 .container {
     display: grid;
     margin: 0 0 0 0px;
-    grid-template-columns: 3fr 0.4fr;
+    grid-template-columns:
+    minmax(100px, auto)
+    minmax(100px, auto)
+    minmax(150px, auto);
+
+
     grid-template-rows:
     minmax(100px, auto)
     minmax(60px, auto)
     minmax(400px, auto)
-    repeat(2, minmax(150px, auto));
+    minmax(250px, auto)
+    minmax(150px, auto);
     grid-row-gap: 1px;
     grid-column-gap: 1px;
     grid-template-areas:
-    'header header'
-    'navigation aside-1'
-    'main aside-1'
-    'aside-2 aside-1'
-    'footer aside-1';
+    'article article aside-1'
+    'navigation navigation aside-1'
+    'main-1 main-2 aside-1'
+    'aside-2 aside-2 aside-1'
+    'footer footer aside-1';
 }
 
 
@@ -44,23 +51,31 @@ section {
   text-align: center;
 }
 
-.header {
-    grid-area: header;
+.article {
+    grid-area: article;
+    background-color: white;
 }
 
 .navigation {
     grid-area: navigation;
+    background-color: lightgray;
 }
 
-.main {
-    grid-area: main;
-   padding: 5 20 0 20px;
+.main-1 {
+    grid-area: main-1;
+   padding: 5 20 5 20px;
    background-color: lightgray;
+}
+
+.main-2 {
+    grid-area: main-2;
+   padding: 5 20 5 20px;
+   background-color: darkgray;
 }
 
 .aside-1 {
     grid-area: aside-1;
-    padding: 0 0 0 0;
+    padding: 0 0 0 0px;
     background-color: darkblue;
 }
 
@@ -70,6 +85,7 @@ section {
 
 #fixed-item {
     right: 0%;
+    bottom: 0%;
    padding: 20 20 20 20px;
    position: fixed;
    width: inherit;
@@ -84,18 +100,10 @@ section {
 .aside-2 {
     grid-area: aside-2;
     padding: 5 0 0 20px;
-    background-color: blue;
+    background-color: white;
 }
 .footer {
     grid-area: footer;
-    padding: 5 0 0 20px;
-    background-color: red;
-}
-.five {
-    padding: 5 0 0 20px;
-    background-color: green;
-}
-.six {
-    padding: 5 0 0 20px;
-    background-color: yellow;
+    padding: 5 20 5 20px;
+    background-color: lightgray;
 }
